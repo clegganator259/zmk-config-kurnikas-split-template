@@ -1,0 +1,25 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    # Additional modules containing boards/shields/custom code can be listed here as well
+    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    #       url-base: https://github.com/zmkfirmware
+    - name: clegganator259
+      url-base: https://github.com/clegganator259
+    - name: carrefinho
+      url-base: https://github.com/carrefinho
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    - name: zmk-keyboard-kurnikas-split-lp
+      remote: clegganator259
+      revision: main
+    - name: prospector-zmk-module
+      remote: carrefinho
+      revision: main
+
+  self:
+    path: config
